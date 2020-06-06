@@ -364,3 +364,5 @@ var loadMore = function() {
 };
 
 // Detect when scrolled to bottom.
+
+module.exports.sTable = sTable;
