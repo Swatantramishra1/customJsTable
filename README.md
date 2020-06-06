@@ -8,7 +8,10 @@ npm i swatantra_table_creater
 ## add this to html file
 
 ```
-<link rel="stylesheet" href="style.css" />
+ <link
+      rel="stylesheet"
+      href="./node_modules/swatantra_table_creater/style.css"
+    />
 
 ```
 

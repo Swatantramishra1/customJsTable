@@ -1,6 +1,6 @@
 {
-  "name": "swatantra_table_creater",
-  "version": "1.0.6",
+  "name": "swatantra_table_creator",
+  "version": "1.0.9",
   "description": "Created as func ",
   "main": "library.js",
   "scripts": {
