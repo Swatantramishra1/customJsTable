@@ -1,5 +1,10 @@
 # Welcome to Custom Js Table
 
+```
+npm i swatantra_table_creater
+
+```
+
 It will take data as:
 
 ```
