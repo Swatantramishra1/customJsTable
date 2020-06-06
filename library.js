@@ -373,6 +373,8 @@ var loadMore = function() {
   let _options = { ...private_options };
   if (_options.data.length < 25) {
     endItem = _options.data.length;
+    _options.data = _options.data.slice(0, endItem);
+    withoutPagination("tableContainer", _options);
   } else {
     if (endItem <= _options.data.length) {
       _options.data = _options.data.slice(0, endItem);
