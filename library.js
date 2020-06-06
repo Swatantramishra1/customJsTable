@@ -1,7 +1,8 @@
 let private_options = null;
 let listElm = null;
 function sTable(id = "", _options = null) {
-  private_options = _options;
+  private_options = checkForOptions(_options);
+
   if (private_options.hasOwnProperty("pagination")) {
     createElem(id, private_options);
     let pagination = new Pagination(private_options);
@@ -76,6 +77,7 @@ function createTable(options) {
     for (const key in row) {
       if (
         row.hasOwnProperty(key) &&
+        options.hasOwnProperty("excludeColumns") &&
         options.excludeColumns.indexOf(key) == -1 &&
         maxCount < maxRows
       ) {
@@ -105,7 +107,11 @@ function createHeader(keys = []) {
 
   let maxRows = getMaxRow(keys.length);
   for (let i = 0; i < maxRows; i++) {
-    if (private_options.excludeColumns.indexOf(keys[i]) == -1) {
+    if (
+      (private_options.hasOwnProperty("excludeColumns") &&
+        private_options.excludeColumns.indexOf(keys[i]) == -1) ||
+      keys[i]
+    ) {
       let isColumnSortable = private_options.hasOwnProperty("sortableColumns")
         ? private_options.sortableColumns
           ? private_options.sortableColumns.indexOf(keys[i]) != -1
@@ -353,19 +359,29 @@ function sort(n) {
   }
 }
 
+function checkForOptions(options) {
+  // Exclude option
+  if (!options.hasOwnProperty("excludeColumns")) {
+    options["excludeColumns"] = [];
+  }
+
+  return options;
+}
+
 var endItem = 25;
 var loadMore = function() {
   let _options = { ...private_options };
-  if (_options.data.length > 25) {
+  if (_options.data.length < 25) {
     endItem = _options.data.length;
-  }
-  if (endItem <= _options.data.length) {
-    _options.data = _options.data.slice(0, endItem);
-    withoutPagination("tableContainer", _options);
-    endItem = endItem + 25;
+  } else {
+    if (endItem <= _options.data.length) {
+      _options.data = _options.data.slice(0, endItem);
+      withoutPagination("tableContainer", _options);
+      endItem = endItem + 25;
+    }
   }
 };
 
 // Detect when scrolled to bottom.
 
-module.exports.sTable = sTable;
+// module.exports.sTable = sTable;
