@@ -1,0 +1,11 @@
+{
+  "name": "swatantra_table_creater",
+  "version": "1.0.0",
+  "description": "Created as func ",
+  "main": "library.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "swatantra mishra",
+  "license": "ISC"
+}
