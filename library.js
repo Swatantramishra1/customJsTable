@@ -1,6 +1,6 @@
 let private_options = null;
 let listElm = null;
-function zTable(id = "", _options = null) {
+function sTable(id = "", _options = null) {
   private_options = _options;
   if (private_options.hasOwnProperty("pagination")) {
     createElem(id, private_options);

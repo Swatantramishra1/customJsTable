@@ -28,5 +28,5 @@ function _createTable() {
     }
   };
 
-  zTable("wrapper", option);
+  sTable("wrapper", option);
 }
