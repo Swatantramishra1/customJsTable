@@ -56,4 +56,4 @@ It will take data as:
 
 # GitHub Link
 
-[a link](https://github.com/Swatantramishra1/customJsTable)
+[Custom Js Table](https://github.com/Swatantramishra1/customJsTable)
