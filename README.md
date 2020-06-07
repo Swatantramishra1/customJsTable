@@ -1,7 +1,7 @@
 # Welcome to Custom Js Table
 
 ```
-npm i swatantra_table_creater
+npm i swatantra_table_creator
 
 ```
 
@@ -53,3 +53,7 @@ It will take data as:
  }
 
 ```
+
+# GitHub Link
+
+[a link](https://github.com/Swatantramishra1/customJsTable)

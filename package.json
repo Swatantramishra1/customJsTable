@@ -1,7 +1,7 @@
 {
   "name": "swatantra_table_creator",
-  "version": "1.0.9",
-  "description": "Created as func ",
+  "version": "1.0.11",
+  "description": " import sTable and use it ",
   "main": "library.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
